@@ -1,9 +1,14 @@
 import praw
 import re
 import os
-import config
 import random
 import time
+
+
+reddit_username = os.environ['reddit_username']
+reddit_password = os.environ['reddit_password']
+client_id = os.environ['client_id']
+client_secret = os.environ['client_secret']
 
 thanos_quotes = \
     [
@@ -36,10 +41,10 @@ thanos_quotes = \
 
 def bot_login():
     print("Loggin in...")
-    r = praw.Reddit(username=config.username,
-                    password=config.password,
-                    client_id=config.client_id,
-                    client_secret=config.client_secret,
+    r = praw.Reddit(username=reddit_username,
+                    password=reddit_password,
+                    client_id=client_id,
+                    client_secret=client_secret,
                     user_agent="thanosquotesbot")
     print("Logged in.")
 
