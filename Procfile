@@ -1,1 +1,1 @@
-worker: python Wordbook_Bot/wordbook_bot.py
+worker: python3 bot.py
