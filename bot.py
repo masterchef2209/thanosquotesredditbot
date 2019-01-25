@@ -52,7 +52,7 @@ def bot_login():
 
 
 def run_bot(r, comments_replied_to):
-    for comment in r.subreddit('test').stream.comments():
+    for comment in r.subreddit('marvelstudios').stream.comments():
         if comment.id not in comments_replied_to:
             if re.search("perfectly balanced", comment.body, re.IGNORECASE):
                 print(comment.body)
