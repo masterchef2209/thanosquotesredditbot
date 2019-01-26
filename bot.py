@@ -63,7 +63,8 @@ def run_bot(r, comments_replied_to):
 
             if re.search("thanos quote", comment.body, re.IGNORECASE):
                 print(comment.body)
-                count=(count+1)%len(thanos_quotes)
+                global count
+                count=(count+1)%(int(len(thanos_quotes)))
                 thanos_reply = thanos_quotes[count]
                 comment.reply(thanos_quotes)
                 if comment.id not in comments_replied_to:
