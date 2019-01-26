@@ -63,7 +63,8 @@ def run_bot(r, comments_replied_to):
 
             if re.search("thanos quote", comment.body, re.IGNORECASE):
                 print(comment.body)
-                thanos_reply = random.choice(thanos_quotes)
+                count=(count+1)%len(thanos_quotes)
+                thanos_reply = thanos_quotes[count]
                 comment.reply(thanos_quotes)
                 if comment.id not in comments_replied_to:
                     comments_replied_to.append(comment.id)
@@ -84,7 +85,7 @@ def get_saved_comments():
 
     return comments_replied_to
 
-
+count=0
 r = bot_login()
 comments_replied_to = get_saved_comments()
 while True:
