@@ -20,7 +20,7 @@ thanos_quotes = \
         "The end is near.",
         "You’re a great fighter, Gamora. Come. Let me help you.",
         "I ignored my destiny once, I can not do that again. Even for you. I’m sorry Little one.",
-        "With all six stones, I can simply snap my fingers, they would all cease to exist. I call that mercy."
+        "With all six stones, I can simply snap my fingers, they would all cease to exist. I call that mercy.",
         """Thanos: Daughter.
         Gamora: Did you do it?
         Thanos: Yes.
